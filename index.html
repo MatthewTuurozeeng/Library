@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Library</h1>
+    </header>
+     <main>
+        <section id="controls">
+            <button id="new-book-btn">New Book</button>
+        </section>
+
+        <section id="Library">
+        <!-- books will be dynamically added here -->
+            <h2>Books</h2>
+            <div id="book-list"></div>
+        </section>
+    </main>
+    <!-- dialog for adding a new book -->
+    <dialog id="new-book-dialog">
+        <form id="new-book-form" method="dialog">
+            <h3>Add a New Book</h3>
+            <p>Please fill in the details of the book you want to add.</p>
+            <label>
+                Title:
+                <input type="text" name="title" required>
+            </label><br>
+
+            <label>
+                Author:
+                <input type="text" name="author" required>
+            </label><br>
+
+            <label>
+                Pages:
+                <input type="number" name="pages" min="1" required>
+            </label><br>
+
+            <label>
+                Read:
+                <input type="checkbox" name="read">
+            </label><br>
+            <p>Note: The book will be added to the library.</p>
+            <p>Click "Add Book" to save it.</p>
+            <div class="dialog-actions">
+                <button type="submit">Add Book</button>
+                <button type="button" id="close-dialog-btn">Cancel</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+
+</body>
+</html>
